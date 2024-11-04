@@ -8,6 +8,7 @@ import logging
 # Initialize logger
 logger = logging.getLogger(__name__)
 
+
 class ActionCurrentTime(Action):
 
     def name(self) -> Text:
@@ -16,7 +17,6 @@ class ActionCurrentTime(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
         # Get the current time
         current_time = datetime.now().strftime("%H:%M")
 
@@ -58,7 +58,8 @@ class ActionFetchTaxAdvice(Action):
                 else:
                     dispatcher.utter_message(text="The service returned an empty response. Please try again later.")
             else:
-                dispatcher.utter_message(text="Sorry, I couldn't fetch the information at the moment. Please try again later.")
+                dispatcher.utter_message(
+                    text="Sorry, I couldn't fetch the information at the moment. Please try again later.")
 
         except requests.exceptions.Timeout:
             dispatcher.utter_message(text="Sorry, the request to the tax service timed out. Please try again.")
@@ -85,7 +86,7 @@ class ActionFetchTaxAdviceFromFile(Action):
         user_query = tracker.latest_message.get('text')
 
         url = "https://prod-tod-api.gateai.co/hmrc/graph/chat"
-        path=""
+        path = ""
         payload = {
             "query": user_query,
             "history": [],
@@ -107,7 +108,8 @@ class ActionFetchTaxAdviceFromFile(Action):
                 else:
                     dispatcher.utter_message(text="The service returned an empty response. Please try again later.")
             else:
-                dispatcher.utter_message(text="Sorry, I couldn't fetch the information at the moment. Please try again later.")
+                dispatcher.utter_message(
+                    text="Sorry, I couldn't fetch the information at the moment. Please try again later.")
 
         except requests.exceptions.Timeout:
             dispatcher.utter_message(text="Sorry, the request to the tax service timed out. Please try again.")
@@ -118,5 +120,20 @@ class ActionFetchTaxAdviceFromFile(Action):
         except Exception as e:
             dispatcher.utter_message(text="Sorry, I encountered an unexpected error.")
             logger.error("Unexpected error for query %s: %s", user_query, e)
+
+        return []
+
+
+class ActionIdentityVerification(Action):
+    def name(self) -> str:
+        return "action_identity_verification"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        user_query = tracker.latest_message.get('text')
+
+        dispatcher.utter_message(
+            text="I'm here to help you with onboarding. Please let me know what you need assistance with.")
 
         return []

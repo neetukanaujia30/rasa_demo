@@ -11,6 +11,9 @@ intents:
   - current_time
   - ask_tax
   - ask_tax_from_file
+  - onboard_user
+  - identity_verification
+  - business_information
 
 responses:
   utter_greet:
@@ -30,7 +33,14 @@ responses:
   - text: "Thanks for chatting! If you have more questions later, feel free to ask. Have a great day!"
 
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  - text: "I am a bot, powered by GateAI."
+
+  utter_onboard_user:
+    - text: "I'm here to help you with onboarding. Please provide me with the following documents:\n\n- **Proof of Identity**: Passport, driving license, or National Identity Card.\n- **Proof of Address**: Utility bills (gas, water, electricity), bank statements, or a council tax bill (dated within the last 3-6 months)."
+
+  utter_business_information:
+    - text: "I'm here to help you with onboarding. Please provide me with the following business documents:\n\n- **Company Registration Details**: Certificate of Incorporation, Companies House Registration Number.\n- **Business Address**: Proof of the registered office address.\n- **Shareholder Information**: List of shareholders and their contact details.\n- **Director Information**: Personal details of directors (proof of identity and proof of address)."
+
 
 session_config:
   session_expiration_time: 60
@@ -38,5 +48,6 @@ session_config:
 
 actions:
   - action_current_time
+  - action_identity_verification
   - action_ask_tax
   - action_ask_tax_from_file

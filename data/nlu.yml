@@ -154,3 +154,46 @@ nlu:
     - Are all my expenses in this file allowable for tax purposes?
     - Check for any potential penalties in my tax filing from this file.
     - Help me estimate my quarterly taxes based on this file data.
+
+
+- intent: onboard_user
+  examples: |
+    - I want to start the onboarding process
+    - Can you help me with onboarding?
+    - I need to onboard as a new user
+    - How do I get started with onboarding?
+    - I'm ready to begin the onboarding
+    - Let's start the onboarding process
+    - I would like to onboard my account
+    - Can you assist me in getting onboarded?
+    - Please guide me through the onboarding
+    - What do I need to do to onboard?
+    - I want to file my taxes
+    - I want to file the tax
+    - Can you help me with filing taxes?
+    - I need assistance with tax filing
+    - How do I file my tax returns?
+    - I want to start my tax filing process
+    - Please help me file my taxes
+    - What documents do I need to file my taxes?
+    - Can you guide me through the tax filing process?
+    - I have questions about my tax return
+    - How can I get my taxes filed?
+
+- intent: identity_verification
+  examples: |
+      - I need to verify my identity.
+      - How do I complete identity verification?
+      - What documents do I need for identity verification?
+      - Can you help me with identity verification?
+      - I want to start the identity verification process.
+    
+
+- intent: business_information
+  examples: |
+      - What business information do you need?
+      - Can you tell me what documents are required for business onboarding?
+      - What do I need to provide for business registration?
+      - I want to know about the business information needed.
+      - Please list the documents required for business onboarding.
+      - What information do you need for the business?

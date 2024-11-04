@@ -2,33 +2,6 @@ version: "3.1"
 
 stories:
 
-#- story: happy path
-#  steps:
-#  - intent: greet
-#  - action: utter_greet
-#  - intent: mood_great
-#  - action: utter_happy
-#
-#- story: sad path 1
-#  steps:
-#  - intent: greet
-#  - action: utter_greet
-#  - intent: mood_unhappy
-#  - action: utter_cheer_up
-#  - action: utter_did_that_help
-#  - intent: affirm
-#  - action: utter_happy
-#
-#- story: sad path 2
-#  steps:
-#  - intent: greet
-#  - action: utter_greet
-#  - intent: mood_unhappy
-#  - action: utter_cheer_up
-#  - action: utter_did_that_help
-#  - intent: deny
-#  - action: utter_goodbye
-
 - story: current time path
   steps:
   - intent: greet
@@ -39,6 +12,20 @@ stories:
   - action: utter_goodbye
 
 
+- story: onboard user path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: onboard_user
+  - action: utter_onboard_user
+  - intent: identity_verification
+  - action: action_identity_verification
+  - action: utter_business_information
+
+
+  - intent: deny
+  - action: utter_goodbye
+
 - story: ask tax path
   steps:
   - intent: greet
@@ -47,3 +34,13 @@ stories:
   - action: action_ask_tax
   - intent: deny
   - action: utter_goodbye
+
+- story: business information user path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: business_information
+  - action: utter_business_information
+  - intent: deny
+  - action: utter_goodbye
+
