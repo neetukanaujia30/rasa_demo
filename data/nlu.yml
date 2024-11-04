@@ -1,0 +1,156 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: ask_tax
+  examples: |
+    - can you help me with my taxes?
+    - what do I need to know about UK tax?
+    - how do I file my tax return in the UK?
+    - what are the tax rates in the UK?
+    - can you explain the UK tax system?
+    - what expenses can I claim on my tax return?
+    - how do I avoid paying too much tax?
+    - what is the deadline for submitting taxes in the UK?
+    - how do I appeal a tax decision?
+    - what tax reliefs are available to me?
+    - am I eligible for a tax refund?
+    - what should I do if I miss the tax deadline?
+    - how do I register for self-assessment in the UK?
+    - what are the implications of tax evasion?
+    - what tax advice can you give for freelancers?
+    - how can I minimize my tax liability?
+    - what are the benefits of making pension contributions?
+    - how does capital gains tax work in the UK?
+    - what records do I need to keep for tax purposes?
+    - can I get tax relief on charitable donations?
+    - what tax obligations do I have as a small business owner?
+    - how do I handle taxes when working abroad?
+    - if I earn £30,000, how much tax will I pay?
+    - I spent £5,000 on work-related expenses; how does that affect my tax?
+    - if my income is £50,000, what tax bracket do I fall into?
+    - can you calculate my tax if I earned £40,000 and spent £10,000?
+    - I expect to earn £25,000 this year; how much tax should I budget for?
+    - if I make a profit of £20,000 from my business, what tax do I owe?
+    - how much tax will I pay on my freelance income of £15,000?
+    - if I receive a bonus of £5,000, how will it impact my tax?
+    - I have rental income of £12,000; how much tax do I need to pay?
+
+
+- intent: ask_tax_from_file
+  examples: |
+    - How much tax do I need to pay based on this file?
+    - Can you find any tax-deductible expenses in this file?
+    - Calculate my tax liability using the data in this file.
+    - What is my taxable income according to the figures in this file?
+    - Review this file and tell me my estimated tax.
+    - Based on this file, how much will I pay in self-employment tax?
+    - Do I qualify for any tax relief based on the expenses in this file?
+    - Using the numbers in this file, what is my expected tax refund?
+    - Check the file to see if I’m eligible for a tax refund.
+    - With the data in this file, what tax rate am I subject to?
+    - Can you show me any available tax credits according to this file?
+    - Calculate my net income after tax based on this file.
+    - Does this file show any taxable benefits I need to report?
+    - How much should I set aside for taxes according to this file?
+    - Review this file for any missed deductions or allowances.
+    - Using this file, tell me if I qualify for any special tax exemptions.
+    - Based on my income in this file, what tax bracket am I in?
+    - Are there any specific tax savings in this file I should be aware of?
+    - What’s my total income after tax deductions from this file?
+    - From the data in this file, what are my remaining tax obligations?
+    - Is my tax calculation accurate based on what’s in this file?
+    - Use this file to help me prepare my tax return.
+    - What is my total tax due according to this file?
+    - Based on this file, am I paying too much tax?
+    - Are all my expenses in this file allowable for tax purposes?
+    - Check for any potential penalties in my tax filing from this file.
+    - Help me estimate my quarterly taxes based on this file data.
